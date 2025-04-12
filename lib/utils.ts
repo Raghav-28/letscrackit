@@ -23,6 +23,7 @@ const checkIconExists = async (url: string) => {
 };
 
 export const getTechLogos = async (techArray: string[]) => {
+  if (!Array.isArray(techArray)) return [];
   const logoURLs = techArray.map((tech) => {
     const normalized = normalizeTechName(tech);
     return {

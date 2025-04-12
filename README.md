@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Lets Crack It
 
-## Getting Started
+![Project Logo](public/LetsCrackIt.png)
 
-First, run the development server:
+Description  
+Lets Crack It is an AI-powered interview preparation platform that helps users practice technical and behavioral interview questions with realistic simulations.
 
+Tech Stack  
+<img src="public/react.svg" alt="React" width="60">
+<img src="public/tailwind.svg" alt="Tailwind CSS" width="60"> 
+<img src="public/nextjs-icon.svg" alt="Next.js" width="60">
+<img src="public/firebase.svg" alt="Firebase" width="60">
+
+Key Features  
+- 🎤 AI-powered mock interviews  
+- 📊 Performance analytics dashboard  
+- 🤖 Interactive coding challenges  
+- 👥 Peer feedback system  
+
+Screenshots  
+<img src="public/pattern.png" alt="Dashboard" width="400">
+<img src="public/robot.png" alt="AI Assistant" width="400">
+<img src="public/user-avatar.png" alt="Profile" width="400">
+<img src="public/tech.svg" alt="Tech Stack" width="400">
+
+Installation  
 ```bash
+git clone https://github.com/yourusername/lets-crack-it.git
+cd lets-crack-it
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+PROJECT STRUCTURE
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+letscrackit/
+├── app/            → Next.js application
+│   ├── (auth)/     → Auth pages
+│   ├── (root)/     → Main pages  
+│   └── api/        → API routes
+├── components/     → UI components
+├── firebase/       → Firebase config
+├── lib/            → Utilities
+├── public/         → Assets
+└── styles/         → Global CSS
