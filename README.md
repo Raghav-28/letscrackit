@@ -6,7 +6,7 @@ Lets Crack It is a web application designed to facilitate interview preparation 
 ## Installation Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/lets-crack-it.git
+   git clone https://github.com/Raghav-28/lets-crack-it.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -38,11 +38,21 @@ To start the development server, run:
 ```bash
 npm run dev
 ```
-Visit `http://localhost:3000` in your browser to view the application.
+Visit [`http://localhost:3000`](https://letscrackit.vercel.app/) in your browser to view the application.
 
 ## Images
 ![Lets Crack It](public/LetsCrackIt.png)
+Tech Stack  
+<img src="public/react.svg" alt="React" width="60">
+<img src="public/tailwind.svg" alt="Tailwind CSS" width="60"> 
+<img src="public/nextjs-icon.svg" alt="Next.js" width="60">
+<img src="public/firebase.svg" alt="Firebase" width="60">
 
+## Key Features  
+- 🎤 AI-powered mock interviews  
+- 📊 Performance analytics dashboard  
+- 🤖 Interactive coding challenges  
+- 👥 Peer feedback system  
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
