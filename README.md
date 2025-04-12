@@ -1,44 +1,50 @@
-Lets Crack It
+# Lets Crack It
 
-![Project Logo](public/LetsCrackIt.png)
+## Description
+Lets Crack It is a web application designed to facilitate interview preparation and practice. It provides users with tools to manage interviews, track progress, and connect with peers.
 
-Description  
-Lets Crack It is an AI-powered interview preparation platform that helps users practice technical and behavioral interview questions with realistic simulations.
+## Installation Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/lets-crack-it.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd lets-crack-it
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Set up Firebase configuration by adding your Firebase credentials in the appropriate files.
 
-Tech Stack  
-<img src="public/react.svg" alt="React" width="60">
-<img src="public/tailwind.svg" alt="Tailwind CSS" width="60"> 
-<img src="public/nextjs-icon.svg" alt="Next.js" width="60">
-<img src="public/firebase.svg" alt="Firebase" width="60">
-
-Key Features  
-- 🎤 AI-powered mock interviews  
-- 📊 Performance analytics dashboard  
-- 🤖 Interactive coding challenges  
-- 👥 Peer feedback system  
-
-Screenshots  
-<img src="public/pattern.png" alt="Dashboard" width="400">
-<img src="public/robot.png" alt="AI Assistant" width="400">
-<img src="public/user-avatar.png" alt="Profile" width="400">
-<img src="public/tech.svg" alt="Tech Stack" width="400">
-
-Installation  
-```bash
-git clone https://github.com/yourusername/lets-crack-it.git
-cd lets-crack-it
-npm install
-npm run dev
-
-PROJECT STRUCTURE
-
+## Project Structure
+```
 letscrackit/
-├── app/            → Next.js application
-│   ├── (auth)/     → Auth pages
-│   ├── (root)/     → Main pages  
-│   └── api/        → API routes
-├── components/     → UI components
-├── firebase/       → Firebase config
-├── lib/            → Utilities
-├── public/         → Assets
-└── styles/         → Global CSS
+├── app/                  # Next.js application files
+│   ├── (auth)/          # Authentication related components
+│   ├── (root)/          # Root layout and pages
+│   └── api/             # API routes
+├── components/           # Reusable UI components
+├── firebase/             # Firebase configuration and functions
+├── lib/                 # Utility functions and actions
+├── public/              # Static assets (images, icons)
+├── styles/              # Global styles
+└── README.md            # Project documentation
+```
+
+## Usage
+To start the development server, run:
+```bash
+npm run dev
+```
+Visit `http://localhost:3000` in your browser to view the application.
+
+## Images
+![Lets Crack It](public/LetsCrackIt.png)
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License.
