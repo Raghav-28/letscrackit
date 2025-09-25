@@ -228,3 +228,29 @@ export const dummyInterviews: Interview[] = [
     createdAt: "2024-03-14T15:30:00Z",
   },
 ];
+
+// Assessment topics and helpers
+export const ASSESSMENT_TOPICS = [
+  "Aptitude",
+  "DSA",
+  "Operating Systems",
+  "DBMS",
+  "Computer Networks",
+  "Discrete Math",
+  "Probability & Statistics",
+  "Algorithms",
+  "Data Structures",
+  "OOP",
+] as const;
+
+export type AssessmentTopic = typeof ASSESSMENT_TOPICS[number];
+
+export const ASSESSMENT_DIFFICULTIES = [
+  "easy",
+  "medium",
+  "hard",
+  "mixed",
+] as const;
+
+export const DEFAULT_ASSESSMENT_DURATION_MIN = 20;
+export const DEFAULT_ASSESSMENT_NUM_QUESTIONS = 10;
