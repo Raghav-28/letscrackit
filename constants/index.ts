@@ -254,3 +254,22 @@ export const ASSESSMENT_DIFFICULTIES = [
 
 export const DEFAULT_ASSESSMENT_DURATION_MIN = 20;
 export const DEFAULT_ASSESSMENT_NUM_QUESTIONS = 10;
+
+// Coding topics
+export const CODING_TOPICS = [
+  "Arrays",
+  "Strings",
+  "Linked Lists",
+  "Stacks",
+  "Queues",
+  "Trees",
+  "Binary Trees",
+  "Binary Search Trees",
+  "Graphs",
+  "Heaps",
+  "Dynamic Programming",
+  "Greedy",
+  "Recursion",
+  "Backtracking",
+  "Bit Manipulation",
+] as const;

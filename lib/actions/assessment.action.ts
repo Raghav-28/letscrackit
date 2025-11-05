@@ -158,18 +158,26 @@ export async function submitAssessment(params: SubmitAssessmentParams) {
     createdAt: new Date().toISOString(),
   };
 
-  // Generate AI suggestions
-  const { text: suggestions } = await generateObject({
+  // Generate AI suggestions (markdown text) using Gemini
+  const { generateText } = await import("ai");
+  const { text: suggestionsText } = await generateText({
     model: google("gemini-2.0-flash-001"),
-    schema: z.string(),
-    prompt: `Provide concise, actionable study advice (bulleted) for a student based on this test summary:
-Score: ${scorePercent}% (Correct ${correct}/${totalQuestions})
-Topic breakdown: ${JSON.stringify(topicBreakdown)}
-Difficulty breakdown: ${JSON.stringify(difficultyBreakdown)}
-Keep it 6-10 bullets, include links (markdown) to high quality resources.`,
-  } as any);
+    prompt: `You are a strict but helpful tutor.
+Provide concise, actionable study advice as a markdown bullet list based on this assessment:
 
-  result.aiSuggestions = String(suggestions);
+Score: ${scorePercent}% (Correct ${correct}/${totalQuestions})
+Topics: ${JSON.stringify(topicBreakdown)}
+Difficulty: ${JSON.stringify(difficultyBreakdown)}
+
+Requirements:
+- 6 to 10 bullets
+- Prioritize topics with lowest accuracy first
+- Suggest specific subtopics and practice tasks
+- Include a few high-quality links in markdown where helpful
+- Keep each bullet to a single sentence`,
+  });
+
+  result.aiSuggestions = String(suggestionsText || "");
 
   const sessionRef = db.collection("assessmentSessions").doc(sessionId);
   const resultRef = sessionRef.collection("results").doc("latest");

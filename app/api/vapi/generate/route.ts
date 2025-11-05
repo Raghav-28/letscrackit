@@ -28,12 +28,30 @@ export async function POST(request: Request){
           `,
         });
 
+        // Normalize payload and persist interview
+        let parsedQuestions: string[] = [];
+        try {
+            parsedQuestions = JSON.parse(questions);
+        } catch {
+            // Fallback: best-effort split if JSON parsing fails
+            parsedQuestions = String(questions)
+              .replace(/^\[|\]$/g, "")
+              .split(/\"\s*,\s*\"|,\s*/)
+              .map((q) => q.replace(/^\"|\"$/g, "").trim())
+              .filter(Boolean);
+        }
+
         const interview ={
-            role, type, level, 
-            tecjStack: techstack.split(','),
-            questions: JSON.parse(questions),
+            role,
+            type,
+            level,
+            techstack: String(techstack)
+              .split(',')
+              .map((t) => t.trim())
+              .filter(Boolean),
+            questions: parsedQuestions,
             userId: userid,
-            finalized:true,
+            finalized: true,
             coverImage: getRandomInterviewCover(),
             createdAt: new Date().toISOString(),
         }
