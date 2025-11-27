@@ -19,10 +19,10 @@ const RootLayout = async ({children}:{children:ReactNode}) => {
         <Link href="/assessment" className='text-sm font-semibold'>Assessment</Link>
         <Link href="/coding" className='text-sm font-semibold'>Coding</Link>
       </div>
-      <div className='flex items-center gap-2'>
+      {/* <div className='flex items-center gap-2'>
         <Link href="/assessment" className='btn'>Start Assessment</Link>
         <Link href="/coding" className='btn'>Start Coding</Link>
-      </div>
+      </div> */}
     </nav>
     {children}
       </div>
